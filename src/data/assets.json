@@ -1,0 +1,184 @@
+{
+  "id": "org-01",
+  "name": "Global Refinery Operations",
+  "type": "Organization",
+  "children": [
+    {
+      "id": "plt-01",
+      "name": "Texas City Plant",
+      "type": "Plant",
+      "children": [
+        {
+          "id": "unt-01",
+          "name": "Crude Distillation Unit",
+          "type": "Unit",
+          "children": [
+            {
+              "id": "ast-01",
+              "name": "Crude Feed Pump P-101",
+              "type": "Asset",
+              "assetCode": "CDU-PMP-101",
+              "class": "Rotating Equipment",
+              "manufacturer": "Kirloskar Brothers Limited",
+              "serialNumber": "KBL-2023-8891",
+              "installDate": "2023-04-15",
+              "status": "Running",
+              "children": [
+                {
+                  "id": "dev-01",
+                  "name": "Vibration Monitor VM-01",
+                  "type": "Device",
+                  "vendor": "Emerson Rosemount",
+                  "protocol": "OPC UA",
+                  "firmware": "v2.4.1",
+                  "connectivity": "EtherNet/IP",
+                  "ipAddress": "192.168.10.115",
+                  "lastSeen": "2026-03-31T10:05:00Z",
+                  "children": [
+                    {
+                      "id": "prm-01",
+                      "name": "Pump Vibration",
+                      "type": "Parameter",
+                      "unit": "mm/s",
+                      "value": 5.8,
+                      "min": 4.1,
+                      "max": 6.2,
+                      "average": 5.1,
+                      "normalRange": [0, 7],
+                      "warningRange": [7, 9],
+                      "status": "Normal"
+                    },
+                    {
+                      "id": "prm-02",
+                      "name": "Bearing Temperature",
+                      "type": "Parameter",
+                      "unit": "°C",
+                      "value": 68.5,
+                      "min": 65.0,
+                      "max": 72.1,
+                      "average": 67.8,
+                      "normalRange": [0, 75],
+                      "warningRange": [75, 90],
+                      "status": "Normal"
+                    }
+                  ]
+                },
+                {
+                  "id": "dev-02",
+                  "name": "Pressure Transmitter PT-01",
+                  "type": "Device",
+                  "vendor": "Yokogawa transmitters",
+                  "protocol": "HART",
+                  "firmware": "v1.1.0",
+                  "connectivity": "WirelessHART",
+                  "ipAddress": "192.168.10.116",
+                  "lastSeen": "2026-03-31T10:05:00Z",
+                  "children": [
+                    {
+                      "id": "prm-03",
+                      "name": "Discharge Pressure",
+                      "type": "Parameter",
+                      "unit": "bar",
+                      "value": 15.2,
+                      "min": 14.8,
+                      "max": 15.5,
+                      "average": 15.1,
+                      "normalRange": [14, 16],
+                      "warningRange": [13, 17],
+                      "status": "Normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "ast-02",
+              "name": "Furnace Heater FH-110",
+              "type": "Asset",
+              "assetCode": "CDU-HTR-110",
+              "class": "Static Equipment",
+              "manufacturer": "BHEL",
+              "serialNumber": "BHEL-FH-990",
+              "installDate": "2021-11-20",
+              "status": "Maintenance",
+              "children": [
+                {
+                  "id": "dev-03",
+                  "name": "Temperature Transmitter TT-02",
+                  "type": "Device",
+                  "vendor": "Siemens sensors",
+                  "protocol": "PROFINET",
+                  "firmware": "v3.0.1",
+                  "connectivity": "Wired",
+                  "ipAddress": "192.168.10.120",
+                  "lastSeen": "2026-03-31T08:15:00Z",
+                  "children": [
+                    {
+                      "id": "prm-04",
+                      "name": "Skin Temperature",
+                      "type": "Parameter",
+                      "unit": "°C",
+                      "value": 415.0,
+                      "min": 350.0,
+                      "max": 420.0,
+                      "average": 395.0,
+                      "normalRange": [300, 400],
+                      "warningRange": [400, 430],
+                      "status": "Warning"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "unt-02",
+          "name": "Hydrocracker Unit",
+          "type": "Unit",
+          "children": [
+            {
+              "id": "ast-03",
+              "name": "Hydrogen Compressor HC-201",
+              "type": "Asset",
+              "assetCode": "HCU-CMP-201",
+              "class": "Rotating Equipment",
+              "manufacturer": "GE Oil & Gas",
+              "serialNumber": "GE-CMP-4455",
+              "installDate": "2022-06-10",
+              "status": "Running",
+              "children": [
+                {
+                  "id": "dev-04",
+                  "name": "Power Meter PM-01",
+                  "type": "Device",
+                  "vendor": "Schneider Electric",
+                  "protocol": "Modbus TCP",
+                  "firmware": "v1.8.2",
+                  "connectivity": "Ethernet",
+                  "ipAddress": "192.168.10.130",
+                  "lastSeen": "2026-03-31T10:05:00Z",
+                  "children": [
+                    {
+                      "id": "prm-05",
+                      "name": "Power Consumption",
+                      "type": "Parameter",
+                      "unit": "kW",
+                      "value": 450.5,
+                      "min": 430.0,
+                      "max": 460.0,
+                      "average": 445.0,
+                      "normalRange": [400, 500],
+                      "warningRange": [500, 550],
+                      "status": "Normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "id": "org-01",
+  "name": "Global Refinery Operations",
+  "type": "Organization",
+  "children": [
+    {
+      "id": "plt-01",
+      "name": "Texas City Plant",
+      "type": "Plant",
+      "children": [
+        {
+          "id": "unt-01",
+          "name": "Crude Distillation Unit",
+          "type": "Unit",
+          "children": [
+            {
+              "id": "uc-01",
+              "name": "Predictive Maintenance",
+              "type": "UseCase",
+              "problem": "Unexpected pump failure",
+              "solution": "Vibration monitoring",
+              "businessImpact": "Reduce downtime by 40%",
+              "children": [
+                {
+                  "id": "kpi-01",
+                  "name": "MTBF",
+                  "type": "KPI",
+                  "value": "420 hrs",
+                  "charts": ["mtbf-bar"]
+                },
+                {
+                  "id": "kpi-02",
+                  "name": "MTTR",
+                  "type": "KPI",
+                  "value": "4.5 hrs",
+                  "charts": ["mttr-line"]
+                },
+                {
+                  "id": "kpi-03",
+                  "name": "Health Score",
+                  "type": "KPI",
+                  "value": "88%",
+                  "charts": ["health-gauge"]
+                },
+                {
+                  "id": "kpi-04",
+                  "name": "Failure Count",
+                  "type": "KPI",
+                  "value": "12",
+                  "charts": ["failure-trend"]
+                }
+              ]
+            },
+            {
+              "id": "uc-02",
+              "name": "Yield Optimization",
+              "type": "UseCase",
+              "problem": "Suboptimal product yield",
+              "solution": "Advanced Process Control",
+              "businessImpact": "Increase yield by 2.5%",
+              "children": [
+                {
+                  "id": "kpi-05",
+                  "name": "Production Throughput",
+                  "type": "KPI",
+                  "value": "12,500 bpd",
+                  "charts": ["production-trend"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "unt-02",
+          "name": "Hydrocracker Unit",
+          "type": "Unit",
+          "children": [
+            {
+              "id": "uc-03",
+              "name": "Energy Management",
+              "type": "UseCase",
+              "problem": "High energy consumption",
+              "solution": "Smart heating control",
+              "businessImpact": "Reduce energy cost by 15%",
+              "children": [
+                {
+                  "id": "kpi-06",
+                  "name": "Energy Intensity",
+                  "type": "KPI",
+                  "value": "1.2 MMBtu/bbl",
+                  "charts": ["energy-trend"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
